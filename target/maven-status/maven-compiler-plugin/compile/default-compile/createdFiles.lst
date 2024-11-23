@@ -1,0 +1,5 @@
+main\java\LogHandler.class
+main\java\LogProcessorApp.class
+main\java\ApplicationLogHandler.class
+main\java\RequestLogHandler.class
+main\java\APMLogHandler.class
