@@ -38,10 +38,10 @@ The command-line application efficiently processes log files containing various 
 The Chain of Responsibility design pattern has been implemented to address this problem. This pattern is realized through a series of handler objects— `APMLogHandler`, `ApplicationLogHandler`, and `RequestLogHandler` —each responsible for processing a specific type of log entry. The handlers are linked together in a chain, allowing each to process or pass log entries to the next handler in line.
 
 - **Strategy Pattern**:
-he Strategy Pattern is well-suited for this application because each log type (APM, Application, Request) requires distinct aggregation logic. By encapsulating the aggregation behavior for each log type into separate, interchangeable strategy classes, the code becomes modular and adheres to the Open-Closed Principle. This pattern allows the `LogProcessor` class to delegate log processing to the appropriate strategy dynamically, depending on the log type. For example, an `APMAggregationStrategy` can calculate statistics like minimum, maximum, median, and average, while a `RequestAggregationStrategy` can handle response time percentiles and status code counts. This approach decouples the classification of logs from their processing logic, making the system extensible and maintainable as new log types or aggregation methods are introduced in the future.
+The Strategy Pattern is well-suited for this application because each log type (APM, Application, Request) requires distinct aggregation logic. By encapsulating the aggregation behavior for each log type into separate, interchangeable strategy classes, the code becomes modular and adheres to the Open-Closed Principle. This pattern allows the `LogProcessor` class to delegate log processing to the appropriate strategy dynamically, depending on the log type. For example, an `APMAggregationStrategy` can calculate statistics like minimum, maximum, median, and average, while a `RequestAggregationStrategy` can handle response time percentiles and status code counts. This approach decouples the classification of logs from their processing logic, making the system extensible and maintainable as new log types or aggregation methods are introduced in the future.
 
 
-
+For this project I have implemented Chain of Responsibility pattern.
 
 
 
